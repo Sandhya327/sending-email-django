@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+    <!-- BULMA CSS FRAMEWORK -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,-25" />
+</head>
+<body>
+    hii
+    <!-- HEADER - NAV BAR -->
+    <section class="hero is-link is-small">
+        <div class="hero-body">
+          <p class="title">
+            <span class="material-symbols-outlined">chat</span>
+            Feedback Form
+          </p>
+        </div>
+    </section>
+
+    <br><br>
+    
+    <div class="container is-max-desktop">   <!-- to center the form -->
+        <!-- FORM STARTS HERE -->
+        <form class="box" action="sendMail/" method=POST >
+            {% csrf_token %}
+
+            <!-- FIRST NAME -->
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label is-small">First Name</label>
+                </div>
+                <div class="control field-body">
+                    <input class="input is-small" type="text" name="firstName" id="">
+                </div>
+            </div>
+
+            <!-- LAST NAME -->
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label is-small">Last Name</label> 
+                </div>
+                <div class="control field-body">
+                <input class="input is-small" type="text" name="secondName" id="">
+                </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label is-small">E-mail</label> 
+                </div>
+                <div class="control field-body">
+                <input class="input is-small" type="email" name="email" id="">
+                </div>
+            </div>
+          
+            <!-- PHONE -->
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label is-small">Phone Number</label> 
+                </div>
+                <div class="control field-body">
+                <input class="input is-small" type="number" name="phoneNumber" id="">
+                </div>
+            </div>
+
+            <!-- COMMENTS -->
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label is-small">Comment</label>
+                </div>
+                <div class="control field-body">
+                <textarea class="textarea is-small" name="comment" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="field is-grouped is-grouped-centered">
+                    <input class="button is-link" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
